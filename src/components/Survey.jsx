@@ -5,6 +5,7 @@ function Survey() {
   const [open, setOpen] = useState(false); //Ignore this state
 
   const [list,setList] = useState([])
+
     const [userData, setUserData] = useState({
         username: "",
         colour: "",
@@ -22,11 +23,11 @@ function Survey() {
     
     
 
-    <AnswersList answersList={[userData]}/>
+    <AnswersList answersList={list}/>
 
       </section>
       <section className="survey__form">{/* a form should be here */}
-        <Form userDataSurvey={userData} setUserDataSurvey={setUserData}/>
+        <Form  list={list} setList={setList}/>
       </section>
     </main>
   );

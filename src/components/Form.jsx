@@ -3,7 +3,7 @@ import Checkboxes from "./Checkboxes";
 import RadioButtons from "./RadioButtons";
 import { useState } from "react";
 
-function Form({userDataSurvey,setUserDataSurvey}){
+function Form({list, setList}){
 
     const [userData, setUserData] = useState({
         username: "",
@@ -14,10 +14,8 @@ function Form({userDataSurvey,setUserDataSurvey}){
     
 
     const submitForm = event =>{
-
         event.preventDefault();
-
-        setUserDataSurvey(userData)
+      setList([...list,userData])
     }
    
     
