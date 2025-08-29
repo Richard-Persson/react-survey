@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Checkboxes({setUserData, userData}){
 
     
@@ -5,7 +6,6 @@ function Checkboxes({setUserData, userData}){
     const handleChange = (event) =>{
 
         const value = event.target.value
-        console.log(value)
         
         switch(value){
 

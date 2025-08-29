@@ -10,16 +10,16 @@ function RadioButtons({setUserData, userData}){
 
         switch(value){
             case"1":
-                setUserData({...userData, rating: "1"})
+                setUserData({...userData, colour: "1"})
             break;
             case"2":
-                setUserData({...userData, rating: "2"})
+                setUserData({...userData, colour: "2"})
             break;
             case"3":
-                setUserData({...userData, rating: "3"})
+                setUserData({...userData, colour: "3"})
             break;
             case"4":
-                setUserData({...userData, rating: "4"})
+                setUserData({...userData, colour: "4"})
             break;
         }
         
@@ -33,7 +33,7 @@ function RadioButtons({setUserData, userData}){
     
 <ul>
   <li>
-    <input id="color-one" type="radio" name="color" value="1" checked={userData.rating ==="1"} onChange={handleChange} /><label htmlFor="color-one">1</label>
+    <input id="color-one" type="radio" name="color" value="1" checked={userData.colour ==="1"} onChange={handleChange} /><label htmlFor="color-one">1</label>
   </li>
   <li>
     <input id="color-two" type="radio" name="color" value="2"  onChange={handleChange} /><label

@@ -1,26 +1,25 @@
+/* eslint-disable react/prop-types */
 import Checkboxes from "./Checkboxes";
 import RadioButtons from "./RadioButtons";
 import { useState } from "react";
 
-function Form(){
+function Form({userDataSurvey,setUserDataSurvey}){
 
     const [userData, setUserData] = useState({
-        rating: "",
+        username: "",
+        colour: "",
         timeSpent: ["","","",""],
-        description: "",
-        name: "",
-        email: "",
+        review: ""
     })
+    
 
     const submitForm = event =>{
 
         event.preventDefault();
-        
 
-        console.log(userData)
+        setUserDataSurvey(userData)
     }
    
-    
     
     return(<>
     
@@ -45,13 +44,13 @@ function Form(){
       name="review"
       cols="30"
       rows="10"
-      onChange={(e)=>{setUserData({...userData, description: e.target.value})}}
+      onChange={(e)=>{setUserData({...userData, review: e.target.value})}}
     ></textarea></label
   ><label
     >Put your name here (if you feel like it):<input
       type="text"
       name="username"
-      onChange={(e)=>{setUserData({...userData, name: e.target.value})}}/></label
+      onChange={(e)=>{setUserData({...userData, username: e.target.value})}}/></label
   ><label
     >Leave us your email pretty please??<input
       type="email"

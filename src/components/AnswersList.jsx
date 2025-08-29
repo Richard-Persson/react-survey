@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import AnswersItem from "./AnswersItem";
 
 export default function AnswersList(props) {
@@ -7,7 +8,7 @@ export default function AnswersList(props) {
 
   return (
     <ul>
-      {answersList.map((answerItem, i) => (
+      {answersList?.map((answerItem, i) => (
         <AnswersItem answerItem={answerItem} key={i} />
       ))}
     </ul>
